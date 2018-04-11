@@ -23,7 +23,7 @@ define( 'WP_CACHE', false );
  * @since  1.0.0 
  */
 function vd($data) {
-	echo '<div style="background-color:#fff;display:block;margin:10px;border:1px solid #ddd;position:relative;z-index:999999;"><blockquote><pre>';
+	echo '<div style="background-color:#fff;display:inline-block;margin:10px;border:1px solid #ddd;position:relative;z-index:999999;"><blockquote><pre>';
 		echo var_export($data, true);
 	echo '</blockquote></pre></div>';
 }
