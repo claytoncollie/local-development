@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Local Developer
  * Description: All functions for working on a local ENV
- * Version: 1.0.0
+ * Version: 1.1.0
  */
 
 /**
@@ -22,10 +22,10 @@ define( 'WP_CACHE', false );
  * Easily dump variables
  * @since  1.0.0 
  */
-function dump($data) {
-	echo '<div style="margin: 10px; padding: 10px; border: 1px solid #ddd;">';
-		highlight_string( var_export($data, true) );
-	echo '</div>';
+function vd($data) {
+	echo '<div style="background-color:#fff;display:block;margin:10px;border:1px solid #ddd;position:relative;z-index:999999;"><blockquote><pre>';
+		echo var_export($data, true);
+	echo '</blockquote></pre></div>';
 }
 
 /**
@@ -604,18 +604,6 @@ class Media_From_Production {
 	
 }
 
-
-
-add_action( 'muplugins_loaded', 'local_developer_init' );
-/**
- * Kick to off
- * @since  1.0.0 
- * @return void
- */
-function local_developer_init() {
-
-	$local_indicator = new Local_Indicator();
-	$bypass_login = new Bypass_Login();
-	$media_from_production = new Media_From_Production();
-
-}
+$local_indicator = new Local_Indicator();
+$bypass_login = new Bypass_Login();
+$media_from_production = new Media_From_Production();
