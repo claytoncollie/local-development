@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Local Developer
  * Description: All functions for working on a local ENV
- * Version: 1.1.0
+ * Version: 1.1.1
  */
 
 /**
@@ -512,7 +512,7 @@ class Media_From_Production {
 		if( isset( $response['url'] ) )
 			$response['url'] = $this->update_image_url( $response['url'] );
 		
-		foreach( $response['sizes'] as &$size ) {
+		foreach( $response['sizes'] as $size ) {
 			$size['url'] = $this->update_image_url( $size['url'] );
 		}	
 			
@@ -606,4 +606,4 @@ class Media_From_Production {
 
 $local_indicator = new Local_Indicator();
 $bypass_login = new Bypass_Login();
-$media_from_production = new Media_From_Production();
+//$media_from_production = new Media_From_Production();
