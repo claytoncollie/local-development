@@ -6,27 +6,15 @@
  */
 
 /**
- * Global Definitions
+ * Global Definitions. Only place in wp-config.php in root on WP install
  * @since  1.0.0 
+ * 
+ * define( 'WP_DEBUG', 			true );
+ * define( 'SCRIPT_DEBUG', 		false );
+ * define( 'WP_DEBUG_DISPLAY', 	true );
+ * define( 'WP_CACHE', 			false );
+ * define( 'FS_METHOD', 		'direct' );
  */
-error_reporting(E_ALL & ~E_NOTICE);
-
-define( 'WP_DEBUG', true );
-define( 'SCRIPT_DEBUG', false );
-define( 'WP_DEBUG_DISPLAY', true );
-define( 'FS_METHOD', 'direct' );
-define( 'WP_CACHE', false );
-
-
-/**
- * Easily dump variables
- * @since  1.0.0 
- */
-function vd($data) {
-	echo '<div style="background-color:#fff;display:inline-block;margin:10px;border:1px solid #ddd;position:relative;z-index:999999;"><blockquote><pre>';
-		echo var_export($data, true);
-	echo '</blockquote></pre></div>';
-}
 
 /**
  * Auto Update
